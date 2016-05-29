@@ -1,0 +1,142 @@
+%!TEX root = ./Portfolio.tex
+
+\documentclass[12pt, a4paper]{report}
+\usepackage{pdfpages}
+\usepackage{graphicx}
+\usepackage{fancyhdr}
+\usepackage{fancyhdr}
+\usepackage{xcolor}
+\usepackage{url}
+\usepackage{wrapfig}
+\usepackage{etoolbox}
+\usepackage{pdfpages}
+\makeatletter
+\patchcmd{\chapter}{\if@openright\cleardoublepage\else\clearpage\fi}{}{}{}
+\makeatother
+\setlength{\headheight}{15pt}
+
+%
+% Force Clear
+%
+\newcommand*\cleartoleftpage{%
+  \clearpage
+  \ifodd\value{page}\hbox{}\newpage\fi
+}
+
+\pagenumbering{gobble}% Remove page numbers (and reset to 1)
+
+%
+% Make title page
+%
+\newcommand{\titlepagehere}
+{
+    \begin{titlepage}
+        \vspace*{50px}
+        \begin{center}
+            {
+
+            \linespread{1.5}
+
+            \includegraphics[width=100pt]{imgs/swinny.pdf}
+
+            {\Huge Doubtfire Helpdesk Ticketing System \\ }
+
+            {\slshape \large \unitcode--\unitname \\ }
+
+            {\scshape \large  Swinburne University of Technology \\}
+
+            { \small \textbf{Team 20} }
+
+            }
+
+        \end{center}
+        \vspace*{\fill}
+        \newpage
+    \end{titlepage}
+}
+
+%
+% A chapter cover page without any following contents
+%
+\newcommand{\chapterpage}[3]
+{
+    \cleartoleftpage
+    {\hfill \includegraphics[width=120pt]{#3}}
+
+    \chapter{#1}
+    {\itshape \Large #2}
+
+    \newpage
+}
+%
+% A chapter cover page with attached PDF contents
+%
+\newcommand{\chapterpagepdf}[4]
+{
+    \cleartoleftpage
+    {\hfill \includegraphics[width=120pt]{#4}}
+
+    \chapter{#1}
+    {\itshape \Large #2}
+    \newpage
+    \cleartoleftpage
+    \includepdf[pages={-}]{#3}
+}
+%
+% Refer to CD page
+%
+\newcommand{\refertocd}
+{
+    \newpage
+    \begin{center}
+        \vspace*{4cm}
+        \includegraphics[width=100pt]{imgs/CD.png}
+
+        \vspace*{10mm}
+
+        {\Large Refer to CD}
+
+        \vspace{5pt}
+        \emph{All other miscellaneous programs, as well as all of the pieces included in this portfolio, can be found on the attached CD.}
+
+        \vspace*{\fill}
+    \end{center}
+}
+%
+% Learning Journal Chapter
+%
+\newcommand{\learningjournal}
+{
+    {\hfill \includegraphics[width=120pt]{imgs/Journal.png}}
+
+    \chapter{Learning Journal}
+    {\itshape \Large Scriptogram Entries } \\ \\ {\small View this online at \url{http://scriptogr.am/alexcu/archive} for better formatting}
+
+    \newpage
+}
+%
+% Image Attributions
+%
+\newenvironment{imgattrs}
+{
+    \vspace*{\fill}
+    \color{gray} \footnotesize \raggedright
+    \hfill
+    \textbf{Image Attributions}
+    \\
+}
+{
+    \hfill
+    \emph{From The Noun Project collection}
+
+    \hfill
+    \emph{\url{http://www.nounproject.com}}
+}
+\newcommand{\imgattr}[2]
+{
+    \hfill
+    `#1' designed by #2
+    \\
+}
+
+\clearpage
