@@ -144,8 +144,8 @@ $else$
 \IfFileExists{parskip.sty}{%
 \usepackage{parskip}
 }{% else
-\setlength{\parindent}{0pt}
-\setlength{\parskip}{6pt plus 2pt minus 1pt}
+  \setlength{\parindent}{0pt}
+  \setlength{\parskip}{6pt plus 2pt minus 1pt}
 }
 $endif$
 \setlength{\emergencystretch}{3em}  % prevent overfull lines
@@ -208,7 +208,7 @@ $endif$
 %
 % Line Spread, Page Markings & Hyperlinked Documents
 %
-\linespread{1.2}
+\linespread{1.3}
 % Margin:
 \usepackage[top=1.5in, bottom=1.5in, right=1in, left=1in]{geometry}
 
