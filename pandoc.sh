@@ -53,6 +53,7 @@ if [ "$1" == "all" ]; then
   run_pandoc "Project-Tools"
   run_pandoc "Reuben's-Worklog"
   run_pandoc "SDLC-Plan"
+  run_pandoc "Who-Did-What?"
 fi
 if [ "$1" == "pdf" ] || [ "$1" == "all" ]; then
   compile_pdf "Requirements-Documentation"
