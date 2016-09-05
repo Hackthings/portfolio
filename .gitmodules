@@ -1,3 +1,6 @@
 [submodule "wiki-s1"]
 	path = wiki-s1
 	url = git@github.com:final-year-project/documentation.wiki.git
+[submodule "wiki-s2"]
+	path = wiki-s2
+	url = https://github.com/final-year-project/documentation.wiki.git
