@@ -1,0 +1,118 @@
+%
+% Portfolio Template
+% Alex Cummaudo
+%
+\def \unitcode      {SWE40002}
+\def \unitname      {Software Engineering Project B}
+
+\include{./Preamble}
+\usepackage{titletoc}
+\linespread{1.5}
+
+\titlecontents*{chapter}% <section-type>
+  [0pt]% <left>
+  {}% <above-code>
+  {\chaptername\ \thecontentslabel\quad}% <numbered-entry-format>
+  {}% <numberless-entry-format>
+  {\rmfamily \hfill\contentspage\\}% <filler-page-format>
+
+\begin{document}
+
+% Portfolio Contents Hees...
+\titlepagehere
+\cleartoleftpage
+
+\noindent
+\textbf{Note to assessor(s):} Every effort was made to convert our interactive Wiki
+at \url{http://github.com/final-year-project/portfolio-s1/wiki} in this document.
+This was made possible by converting the pages to \LaTeX\ using Pandoc. Should there
+be formatting issues, please refer to the original content on the GitHub wiki instead.
+
+\cleartoleftpage
+
+\section*{Declaration}
+
+We declare that this portfolio is a group assessment and that no part of this
+submission has been copied from any other student's work or from any other
+source except where due acknowledgment is made explicitly in the text, nor has
+any part been written for us by another person.
+
+We declare that all work in this portfolio has been sighted, reviewed and agreed
+by each team member, including a peer-validated review of worklog entries by
+each of us.
+
+\hfill --- October, 2016
+
+\vspace{5em}
+
+\begin{center}
+  \noindent
+  \begin{minipage}{0.34\textwidth}
+    \hrule
+    \vspace{1em}
+    \small
+    {Alex Cummaudo}
+  \end{minipage}%
+  \hspace{0.125\textwidth}%
+  \begin{minipage}{0.34\textwidth}
+    \hrule
+    \vspace{1em}
+    \small
+    {Jake Renzella}
+  \end{minipage}%
+
+  \vspace{5em}
+
+  \noindent
+  \begin{minipage}{0.34\textwidth}
+    \hrule
+    \vspace{1em}
+    \small
+    {Lachlan West}
+  \end{minipage}%
+  \hspace{0.125\textwidth}%
+  \begin{minipage}{0.34\textwidth}
+    \hrule
+    \vspace{1em}
+    \small
+    {Reuben Wilson}
+  \end{minipage}%
+\end{center}
+
+\cleartoleftpage
+\tableofcontents
+
+\chapterpagepdf{Group Details}{}{Group-Contact-Details.pdf}{imgs/team.png}
+\chapterpagepdf{Checklist}{}{S2-Checklist.pdf}{imgs/team.png}
+\chapterpagepdf{Who Did What?}{}{S2-Who-Did-What?.pdf}{imgs/wdw.png}
+\chapterpagepdf{Assessment Criteria Agreement}{}{Assessment-Criteria-Agreement.pdf}{imgs/handshake.png}
+\chapterpagepdf{Project Plan Update}{}{S2-Project-Plan.pdf}{imgs/plan.png}
+\chapterpagepdf{Agile Methodology Workflow Update}{SDLC Plan}{S2-SDLC-Plan.pdf}{imgs/agile.png}
+\chapterpagepdf{Requirements Update}{}{S2-SRS.pdf}{imgs/techreqs.png}
+\chapterpagepdf{Design Prototype}{}{S2-Wireframes.pdf}{imgs/prototype.png}
+\chapterpagepdf{Usability Testing Report}{}{S2-Usability-Testing-Report.pdf}{imgs/prototype.png}
+\chapterpagepdf{Technical Manual}{}{S2-Technical-Manual.pdf}{imgs/qa.png}
+\chapterpagepdf{User Manual}{}{S2-User-Manual.pdf}{imgs/qa.png}
+\chapterpagepdf{Source Code Directory Dump}{}{S2-Source-Code-Dump.pdf}{imgs/qa.png}
+\chapterpagepdf{Source Code}{}{S2-API-Web-Changes.pdf}{imgs/movie.png}
+\chapterpagepdf{Alex's Worklog}{Contribution Statements}{S2-Alex's-Worklog.pdf}{imgs/alex-log.png}
+\chapterpagepdf{Jake's Worklog}{Contribution Statements}{S2-Jake's-Worklog.pdf}{imgs/jake-log.png}
+\chapterpagepdf{Lachlan's Worklog}{Contribution Statements}{S2-Lachlan's-Worklog.pdf}{imgs/lachy-log.png}
+\chapterpagepdf{Reuben's Worklog}{Contribution Statements}{S2-Reuben's-Worklog.pdf}{imgs/reubs-log.png}
+\chapterpagepdf{Meeting Minutes}{}{S2-Meeting-Minutes.pdf}{imgs/meeting.png}
+
+% Image Attributions
+\begin{imgattrs}
+  \imgattr{Scrum Development Team}{Roy Verhaag}
+  \imgattr{Storage}{Dirk-Pieter van Walsum}
+  \imgattr{Technical Requirements}{Alvarobueno}
+  \imgattr{Quality Assurance}{Lorenzo Stella}
+  \imgattr{Agile}{Nimal Raj}
+  \imgattr{Concept Prototype}{Yu Luck}
+  \imgattr{LOG File}{Viktor Vorobyev}
+  \imgattr{Meeting}{Marie Van den Broeck}
+  \imgattr{Plan}{Michael Finney}
+  \imgattr{Profile User Flow}{Sharon Showalter}
+\end{imgattrs}
+
+\end{document}

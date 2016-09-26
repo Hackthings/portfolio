@@ -219,8 +219,8 @@ $endif$
 \usepackage{fancyhdr}
 \pagestyle{fancy}
 \fancyhf{} % Clear all header and footer fields
-\fancyhead[LO,RE]{Helpdesk Ticketing System\\{\vspace{-2pt}\scriptsize Semester 1}}
-\fancyhead[LE,RO]{\leftmark\\{\vspace{-4pt}\scriptsize SWE40001 Software Engineering Project}}
+\fancyhead[LO,RE]{Helpdesk Ticketing System\\{\vspace{-2pt}\scriptsize Semester 2}}
+\fancyhead[LE,RO]{\leftmark\\{\vspace{-4pt}\scriptsize SWE40002 Software Engineering Project}}
 \fancyfoot[LE,RO]{\thepage\ifodd\value{page}\else\hfill\fi}
 \usepackage{float}
 

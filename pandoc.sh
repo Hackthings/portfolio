@@ -15,6 +15,14 @@ function run_pandoc() {
 }
 
 #
+# Runs tex output
+#
+function generate_tex() {
+  echo "Generating tex for $1..."
+  pandoc "$WIKI_DIR/$1.md" --template ./template.latex -V toc -V -s --number-sections -V links-as-notes -V papersize=a4 -V indent -V fontsize=12pt -o "$LATEX_DIR/$1.tex"
+}
+
+#
 # Compiles our final PDF
 #
 function compile_pdf() {
@@ -38,33 +46,38 @@ function compile_pdf() {
 }
 
 # Update git submodule always
-git submodule update
-git submodule foreach git pull origin master
+git submodule update --remote wiki-s2
 
 if [ "$1" == "all" ]; then
   # Run pandoc...
-  run_pandoc "Alex's-Worklog"
+  run_pandoc "S2-Checklist"
+  run_pandoc "S2-Who-Did-What"
   run_pandoc "Assessment-Criteria-Agreement"
-  run_pandoc "Contributing-Web"
-  run_pandoc "Jake's-Worklog"
-  run_pandoc "Lachlan's-Worklog"
-  run_pandoc "Meeting-Minutes"
-  run_pandoc "Presentation-Video"
-  run_pandoc "Project-Tools"
-  run_pandoc "Reuben's-Worklog"
-  run_pandoc "SDLC-Plan"
-  run_pandoc "Who-Did-What?"
+  run_pandoc "S2-Project-Plan"
+  run_pandoc "S2-SDLC-Plan"
+  run_pandoc "S2-SRS"
+  run_pandoc "S2-Wireframes"
+  run_pandoc "S2-Usability-Testing-Report"
+  run_pandoc "S2-Technical-Manual"
+  run_pandoc "S2-User-Manual"
+  run_pandoc "S2-Source-Code-Dump"
+  run_pandoc "S2-API-Web-Changes"
+  run_pandoc "S2-Alex's-Worklog"
+  run_pandoc "S2-Jake's-Worklog"
+  run_pandoc "S2-Lachlan's-Worklog"
+  run_pandoc "S2-Reuben's-Worklog"
+  run_pandoc "S2-Meeting-Minutes"
 fi
 if [ "$1" == "pdf" ] || [ "$1" == "all" ]; then
-  compile_pdf "Requirements-Documentation"
-  compile_pdf "Contributing-API"
-  compile_pdf "Project-Plan"
-  compile_pdf "Group-Contact-Details"
-  compile_pdf "Design-Prototype"
+  # compile_pdf "Requirements-Documentation"
+  compile_pdf "S2-Technical-Manual"
+  # compile_pdf "Project-Plan"
+  # compile_pdf "Group-Contact-Details"
+  # compile_pdf "Design-Prototype"
 elif [ "$1" != "tex" ]; then
   run_pandoc $1
 fi
 
 # Always recompile the PDF
-compile_pdf "Portfolio"
-open "$LATEX_DIR/Portfolio.pdf"
+# compile_pdf "Portfolio"
+# open "$LATEX_DIR/Portfolio.pdf"
