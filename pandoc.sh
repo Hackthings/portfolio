@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
 ROOT=$(pwd)
-LATEX_DIR="$ROOT/latex"
-WIKI_DIR="$ROOT/wiki"
+LATEX_DIR="$ROOT/latex-s2"
+WIKI_DIR="$ROOT/wiki-s2"
 
 echo "Running compile at $ROOT"
 
