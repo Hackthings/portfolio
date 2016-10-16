@@ -48,36 +48,30 @@ function compile_pdf() {
 # Update git submodule always
 git submodule update --remote wiki-s2
 
-if [ "$1" == "all" ]; then
-  # Run pandoc...
-  run_pandoc "S2-Checklist"
-  run_pandoc "S2-Who-Did-What"
-  run_pandoc "Assessment-Criteria-Agreement"
-  run_pandoc "S2-Project-Plan"
-  run_pandoc "S2-SDLC-Plan"
-  run_pandoc "S2-SRS"
-  run_pandoc "S2-Wireframes"
-  run_pandoc "S2-Usability-Testing-Report"
-  run_pandoc "S2-Technical-Manual"
-  run_pandoc "S2-User-Manual"
-  run_pandoc "S2-Source-Code-Dump"
-  run_pandoc "S2-API-Web-Changes"
-  run_pandoc "S2-Alex's-Worklog"
-  run_pandoc "S2-Jake's-Worklog"
-  run_pandoc "S2-Lachlan's-Worklog"
-  run_pandoc "S2-Reuben's-Worklog"
-  run_pandoc "S2-Meeting-Minutes"
-fi
-if [ "$1" == "pdf" ] || [ "$1" == "all" ]; then
-  # compile_pdf "Requirements-Documentation"
-  compile_pdf "S2-Technical-Manual"
-  # compile_pdf "Project-Plan"
-  # compile_pdf "Group-Contact-Details"
-  # compile_pdf "Design-Prototype"
-elif [ "$1" != "tex" ]; then
-  run_pandoc $1
-fi
+# if [ "$1" == "all" ]; then
+#   # Run pandoc...
+#   run_pandoc "S2-Who-Did-What"
+#   run_pandoc "Assessment-Criteria-Agreement"
+#   generate_tex "S2-Project-Plan"
+#   run_pandoc "S2-SDLC-Plan"
+#   run_pandoc "S2-SRS"
+#   run_pandoc "S2-Wireframes"
+#   generate_tex "S2-Usability-Testing-Report"
+#   run_pandoc "S2-User-Manual"
+  # run_pandoc "S2-Source-Code-Dump"
+#   generate_tex "S2-API-Web-Changes"
+#   run_pandoc "S2-Meeting-Minutes"
+# fi
+# if [ "$1" == "pdf" ] || [ "$1" == "all" ]; then
+#   # compile_pdf "Requirements-Documentation"
+#   compile_pdf "S2-Technical-Manual"
+#   # compile_pdf "Project-Plan"
+#   # compile_pdf "Group-Contact-Details"
+#   # compile_pdf "Design-Prototype"
+# elif [ "$1" != "tex" ]; then
+#   run_pandoc $1
+# fi
 
 # Always recompile the PDF
-# compile_pdf "Portfolio"
-# open "$LATEX_DIR/Portfolio.pdf"
+compile_pdf "Portfolio"
+open "$LATEX_DIR/Portfolio.pdf"
